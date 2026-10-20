@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Art Atlas | Explore India's Art Heritage</title>
+  <meta name="description" content="Explore India's artistic heritage through an interactive map of historic sites and traditional art forms.">
+
+  <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">Kala<span>Atlas</span></a>
+    <nav>
+      <a href="#explore">Explore Map</a>
+      <a href="#collection">Art Collection</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">A JOURNEY THROUGH INDIAN HERITAGE</p>
+        <h1>Discover the art<br>that tells <em>India's story.</em></h1>
+        <p class="hero-description">
+          Travel across centuries of creativity, from ancient cave paintings
+          to vibrant folk traditions, through one interactive map.
+        </p>
+        <a href="#explore" class="primary-button">Explore the Map ↗</a>
+      </div>
+      <div class="hero-art" aria-label="Decorative illustration inspired by Indian folk art">
+        <div class="sun"></div>
+        <div class="hill hill-one"></div>
+        <div class="hill hill-two"></div>
+        <div class="hero-caption">ART • CULTURE • HISTORY</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>8</strong><span>Art destinations</span></div>
+      <div><strong>5,000+</strong><span>Years of heritage</span></div>
+      <div><strong>28</strong><span>States of diversity</span></div>
+    </section>
+
+    <section id="explore" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">EXPLORE BY LOCATION</p>
+        <h2>India's living art map</h2>
+        <p>Select a marker on the map to discover the art and history of that place.</p>
+      </div>
+
+      <div class="map-layout">
+        <div class="map-card">
+          <div class="map-topbar">
+            <span>✦ Interactive Heritage Map</span>
+            <span class="live-label">● Explore</span>
+          </div>
+          <div id="map" role="application" aria-label="Interactive map of Indian art destinations">
+            <p class="map-fallback">
+              The map needs an internet connection to load.
+            </p>
+          </div>
+          <p class="map-note">Map data © OpenStreetMap contributors</p>
+        </div>
+
+        <aside class="detail-card" id="detail-panel">
+          <div id="detail-art" class="art-illustration mithila-art">
+            <span class="art-symbol">✿</span>
+            <span class="art-label">TRADITIONAL ART</span>
+          </div>
+          <div class="detail-content">
+            <span id="detail-category" class="tag">Folk Art</span>
+            <p id="detail-region" class="region">Bihar, Eastern India</p>
+            <h3 id="detail-title">Mithila Painting</h3>
+            <p id="detail-description">
+              A colourful folk-art tradition known for intricate patterns,
+              bold outlines and themes from nature and mythology.
+            </p>
+            <div class="detail-divider"></div>
+            <h4>Historical significance</h4>
+            <p id="detail-history">
+              Mithila painting is traditionally associated with the Mithila
+              region of Bihar and has been passed down through generations.
+            </p>
+            <div class="detail-facts">
+              <div><span>Art form</span><strong id="detail-artist">Folk painting</strong></div>
+              <div><span>Known for</span><strong id="detail-work">Nature and mythology</strong></div>
+            </div>
+            <p class="source-line">Learn more: <a id="detail-source" href="https://en.wikipedia.org/wiki/Madhubani_art" target="_blank" rel="noopener noreferrer">Read about this art ↗</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="collection" class="section collection-section">
+      <div class="section-heading">
+        <p class="eyebrow">A DIVERSE CULTURAL LANDSCAPE</p>
+        <h2>Explore the art collection</h2>
+        <p>Search or filter the destinations, then select a place to learn more.</p>
+      </div>
+
+      <div class="collection-controls">
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="search-input" type="search" placeholder="Search art, place or state..." aria-label="Search art destinations">
+        </label>
+
+        <div class="filter-buttons" aria-label="Filter by art category">
+          <button class="filter-btn active" data-filter="All">All</button>
+          <button class="filter-btn" data-filter="Ancient">Ancient</button>
+          <button class="filter-btn" data-filter="Folk Art">Folk Art</button>
+          <button class="filter-btn" data-filter="Classical">Classical</button>
+          <button class="filter-btn" data-filter="Craft">Craft</button>
+        </div>
+      </div>
+
+      <div id="destination-grid" class="destination-grid"></div>
+      <p id="no-results" class="no-results" hidden>No destinations found. Try another search.</p>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-mark">कला</div>
+      <div>
+        <p class="eyebrow">ABOUT THE PROJECT</p>
+        <h2>Art connects us to our past.</h2>
+        <p>
+          Indian Art Atlas is an educational project that brings together
+          important locations in Indian art history. It uses an interactive
+          map, short descriptions and historical context to show how art
+          reflects the beliefs, creativity and traditions of different regions.
+        </p>
+        <p class="disclaimer">
+          The decorative artwork on this website is illustrative. It is not
+          a photograph of the original historical artworks.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">Kala<span>Atlas</span></a>
+    <p>An interactive journey through India's artistic heritage.</p>
+    <p>Educational project • Indian Art History</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
